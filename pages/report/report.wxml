@@ -1,0 +1,39 @@
+<!--pages/report/report.wxml-->
+<view class="container" style="background: #566cf3 url('{{cssImg.bg}}') no-repeat; background-size: 100% auto;">
+  <view class="content">
+    <view class="content__title">
+      <image src="{{cssImg.wenjian}}" style="width: 39rpx; height:48rpx;"></image>
+      <text>【维修内容】</text>
+    </view>
+    <view class="content__body">
+      <view>报修时间: {{ReportTime}}</view>
+      <view>报修厕所: {{ToiletName}}</view>
+      <view>报修区域: {{RegionName}}</view>
+      <view>报修项目: {{ReportContent}}</view>
+      <view>维修时间: {{RepairTime}}</view>
+      <view>维修人员: {{RepairUser}}</view>
+    </view>
+  </view>
+
+  <view class="content">
+    <view class="content__title">
+      <image src="{{cssImg.bianji}}" style="width: 39rpx; height:48rpx;"></image>
+      <text>【维修意见】</text>
+    </view>
+    <view class="content__body content__body__textarea" wx:for="{{RepairOpinion}}" wx:key="index">
+      <view wx:if="{{index === RepairOpinion.length - 1}}">
+        <textarea placeholder="请输入维修意见" placeholder-style="color:#e1e1e1;" value="{{item}}" bindinput="eventInput" data-idx="{{index}}"></textarea>
+      </view>
+      <view wx:else>
+        <textarea placeholder="请输入维修意见" disabled="true" placeholder-style="color:#e1e1e1;" value="{{item}}" bindinput="eventInput" data-idx="{{index}}"></textarea>
+      </view>
+    </view>
+  </view>
+
+  <view class="content content__button">
+    <button class="button--finish" hover-class="hoverFinishStyle" bindtap="finishBtn">修理完毕</button>
+    <button class="button--reset" hover-class="hoverStyle" bindtap="reset">重置内容</button>
+    <button class="button--submit" hover-class="hoverStyle" bindtap="submitRepairRecord">提交内容</button>
+    <button class="button--add" bindtap="add"><image src="{{cssImg.add}}" style="width:26rpx; height:26rpx; position:absolute; left:17rpx; top: 17rpx;"></image></button>
+  </view>
+</view>

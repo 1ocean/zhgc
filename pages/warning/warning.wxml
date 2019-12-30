@@ -1,0 +1,161 @@
+<!--pages/warning/warning.wxml-->
+<view class="container" style="background: #566cf3 url('{{cssImg.bg}}') no-repeat; background-size: 100% auto; ">
+  <view class="warningArea">
+    <view class="info">
+      <view class="line">
+        <view>和平向东</view>
+        <view>
+          <image src="{{cssImg.star}}" style="width: 32rpx; height: 30rpx;"></image>
+          <image src="{{cssImg.star}}" style="width: 32rpx; height: 30rpx;"></image>
+          <image src="{{cssImg.star}}" style="width: 32rpx; height: 30rpx;"></image>
+        </view>
+      </view>
+      <view class="line">
+        <view class="msg">女厕所水龙头坏了</view>
+        <view class="date">2018-09-12</view>
+      </view>
+    </view>
+    <view class="info">
+      <view class="line">
+        <view class="title">和平向东</view>
+        <view>
+          <image src="{{cssImg.star}}" style="width: 32rpx; height: 30rpx;"></image>
+          <image src="{{cssImg.star}}" style="width: 32rpx; height: 30rpx;"></image>
+          <image src="{{cssImg.star}}" style="width: 32rpx; height: 30rpx;"></image>
+          <image src="{{cssImg.star}}" style="width: 32rpx; height: 30rpx;"></image>
+          <image src="{{cssImg.star}}" style="width: 32rpx; height: 30rpx;"></image>
+        </view>
+      </view>
+      <view class="line">
+        <view class="msg">女厕所水龙头坏了女厕所水龙头坏了女厕所水龙头坏了女厕所水龙头坏了女厕所水龙头坏了</view>
+        <view class="date">2018-09-12</view>
+      </view>
+    </view>
+    <view class="info">
+      <view class="line">
+        <view>和平向东</view>
+        <view>
+          <image src="{{cssImg.star}}" style="width: 32rpx; height: 30rpx;"></image>
+          <image src="{{cssImg.star}}" style="width: 32rpx; height: 30rpx;"></image>
+          <image src="{{cssImg.star}}" style="width: 32rpx; height: 30rpx;"></image>
+        </view>
+      </view>
+      <view class="line">
+        <view class="msg">女厕所水龙头坏了</view>
+        <view class="date">2018-09-12</view>
+      </view>
+    </view>
+    <view class="info">
+      <view class="line">
+        <view>和平向东</view>
+        <view>
+          <image src="{{cssImg.star}}" style="width: 32rpx; height: 30rpx;"></image>
+          <image src="{{cssImg.star}}" style="width: 32rpx; height: 30rpx;"></image>
+          <image src="{{cssImg.star}}" style="width: 32rpx; height: 30rpx;"></image>
+        </view>
+      </view>
+      <view class="line">
+        <view class="msg">女厕所水龙头坏了</view>
+        <view class="date">2018-09-12</view>
+      </view>
+    </view>
+    <view class="info">
+      <view class="line">
+        <view>和平向东</view>
+        <view>
+          <image src="{{cssImg.star}}" style="width: 32rpx; height: 30rpx;"></image>
+          <image src="{{cssImg.star}}" style="width: 32rpx; height: 30rpx;"></image>
+          <image src="{{cssImg.star}}" style="width: 32rpx; height: 30rpx;"></image>
+        </view>
+      </view>
+      <view class="line">
+        <view class="msg">女厕所水龙头坏了</view>
+        <view class="date">2018-09-12</view>
+      </view>
+    </view>
+    <view class="info">
+      <view class="line">
+        <view>和平向东</view>
+        <view>
+          <image src="{{cssImg.star}}" style="width: 32rpx; height: 30rpx;"></image>
+          <image src="{{cssImg.star}}" style="width: 32rpx; height: 30rpx;"></image>
+          <image src="{{cssImg.star}}" style="width: 32rpx; height: 30rpx;"></image>
+        </view>
+      </view>
+      <view class="line">
+        <view class="msg">女厕所水龙头坏了</view>
+        <view class="date">2018-09-12</view>
+      </view>
+    </view>
+    <view class="info">
+      <view class="line">
+        <view>和平向东</view>
+        <view>
+          <image src="{{cssImg.star}}" style="width: 32rpx; height: 30rpx;"></image>
+          <image src="{{cssImg.star}}" style="width: 32rpx; height: 30rpx;"></image>
+          <image src="{{cssImg.star}}" style="width: 32rpx; height: 30rpx;"></image>
+        </view>
+      </view>
+      <view class="line">
+        <view class="msg">女厕所水龙头坏了</view>
+        <view class="date">2018-09-12</view>
+      </view>
+    </view>
+    <view class="info">
+      <view class="line">
+        <view>和平向东</view>
+        <view>
+          <image src="{{cssImg.star}}" style="width: 32rpx; height: 30rpx;"></image>
+          <image src="{{cssImg.star}}" style="width: 32rpx; height: 30rpx;"></image>
+          <image src="{{cssImg.star}}" style="width: 32rpx; height: 30rpx;"></image>
+        </view>
+      </view>
+      <view class="line">
+        <view class="msg">女厕所水龙头坏了</view>
+        <view class="date">2018-09-12</view>
+      </view>
+    </view>
+    <view class="info">
+      <view class="line">
+        <view>和平向东</view>
+        <view>
+          <image src="{{cssImg.star}}" style="width: 32rpx; height: 30rpx;"></image>
+          <image src="{{cssImg.star}}" style="width: 32rpx; height: 30rpx;"></image>
+          <image src="{{cssImg.star}}" style="width: 32rpx; height: 30rpx;"></image>
+        </view>
+      </view>
+      <view class="line">
+        <view class="msg">女厕所水龙头坏了</view>
+        <view class="date">2018-09-12</view>
+      </view>
+    </view>
+    <view class="info">
+      <view class="line">
+        <view>和平向东</view>
+        <view>
+          <image src="{{cssImg.star}}" style="width: 32rpx; height: 30rpx;"></image>
+          <image src="{{cssImg.star}}" style="width: 32rpx; height: 30rpx;"></image>
+          <image src="{{cssImg.star}}" style="width: 32rpx; height: 30rpx;"></image>
+        </view>
+      </view>
+      <view class="line">
+        <view class="msg">女厕所水龙头坏了</view>
+        <view class="date">2018-09-12</view>
+      </view>
+    </view>
+    <view class="info">
+      <view class="line">
+        <view>和平向东</view>
+        <view>
+          <image src="{{cssImg.star}}" style="width: 32rpx; height: 30rpx;"></image>
+          <image src="{{cssImg.star}}" style="width: 32rpx; height: 30rpx;"></image>
+          <image src="{{cssImg.star}}" style="width: 32rpx; height: 30rpx;"></image>
+        </view>
+      </view>
+      <view class="line">
+        <view class="msg">女厕所水龙头坏了</view>
+        <view class="date">2018-09-12</view>
+      </view>
+    </view>
+  </view>
+</view>

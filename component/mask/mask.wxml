@@ -1,0 +1,4 @@
+<!--component/mask/mask.wxml-->
+<view class="mask{{show === true ? ' show' : ''}}" style="height:{{winheight}}px;">
+  <slot></slot>
+</view>

@@ -1,0 +1,39 @@
+/* pages/clock/clock.wxss */
+.clockArea {
+  width: 320rpx;
+  height: 320rpx;
+  border-radius: 160rpx;
+  transform: translateY(100%);
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.4);
+  transition: all 1s;
+}
+
+.clockArea.hide {
+  opacity: 0.6;
+  transform: translateY(100%) scale(0.8);
+}
+
+.clockArea .box {
+  width: 280rpx;
+  height: 280rpx;
+  border-radius: 140rpx;
+  transform: translateY(20rpx);
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 1);
+  text-align: center;
+  overflow: hidden;
+}
+
+.clockArea .box view {
+  margin-top:60rpx;
+}
+
+.clockArea .box view:last-child {
+  margin-top:10rpx;
+}
+
+.clockArea .box view text {
+  font-size: 36rpx;
+  color: #566cf3;
+}

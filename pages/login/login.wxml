@@ -1,0 +1,24 @@
+<!--pages/login/login.wxml-->
+<view class="container" style="background: #566cf3 url('{{cssImg.bg}}') no-repeat; background-size: 100% auto; height:{{winheight}}px;">
+  <form bindsubmit="formSubmit">
+    <view class="title">
+      <view class="section">
+        <image src="{{cssImg.logo}}" style="width: 40rpx; height: 40rpx; margin-right: 20rpx;"></image>
+        <text>{{title}}</text>
+      </view>
+    </view>
+    <view class="loginArea">
+      <view class="section">
+        <image src="{{cssImg.user}}" style="width: 40rpx; height: 44rpx;"></image>
+        <input type="text" name="UserName" placeholder="请输入账号" placeholder-class="placeholderStyle" />
+      </view>
+      <view class="section">
+        <image src="{{cssImg.mima}}" style="width: 38rpx; height: 42rpx;"></image>
+        <input type="password" name="PassWord" placeholder="请输入密码" placeholder-class="placeholderStyle" />
+      </view>
+      <view class="section noborder">
+        <button open-type="getUserInfo" form-type="submit">登 录</button>
+      </view>
+    </view>
+  </form>
+</view>

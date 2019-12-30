@@ -1,0 +1,29 @@
+<!--pages/home/home.wxml-->
+<view class="container" style="background: #566cf3 url('{{cssImg.bg}}') no-repeat; background-size: 100% auto; height:{{winheight}}px;">
+  <view class="buttonArea">
+    <view wx:if="{{role === 'cheaner'||role==='leader'}}" class="btn" bindtap="tapHandle" data-page="photo">
+      <image src="{{cssImg.baoxiu}}" class="btnIcon"></image>一键报修
+    </view>
+    <!-- <view wx:if="{{role === 'cheaner'}}" class="btn" bindtap="tapHandle" data-page="clock">
+      <image src="{{cssImg.daka}}" class="btnIcon"></image>清洁打卡
+    </view> -->
+    <!-- <view wx:if="{{role === 'cheaner'||role==='leader'}}" class="btn" bindtap="tapHandle" data-page="cleanList">
+      <image src="{{cssImg.shebei}}" class="btnIcon"></image>清洁工单
+    </view> -->
+    <view wx:if="{{role==='leader'}}" class="btn" bindtap="tapHandle" data-page="cleanList">
+      <image src="{{cssImg.shebei}}" class="btnIcon"></image>清洁工单
+    </view>
+    <view wx:if="{{role === 'cheaner'||role==='leader'}}" class="btn" bindtap="tapHandle" data-page="repair">
+      <image src="{{cssImg.shebei}}" class="btnIcon"></image>查看工单
+    </view>
+    <view wx:if="{{role === 'repair'}}" class="btn" bindtap="tapHandle" data-page="device">
+      <image src="{{cssImg.weixiu}}" class="btnIcon"></image>设备维修
+    </view>
+    <!-- <view wx:if="{{role === 'leader'||role==='repair'}}" class="btn" bindtap="tapHandle" data-page="warning">
+      <image src="{{cssImg.yujing}}" class="btnIcon"></image>预警信息
+    </view> -->
+    <view class="btn" bindtap="exit">
+      退出登录
+    </view>
+  </view>
+</view>

@@ -1,0 +1,37 @@
+<!--component/photo/photo.wxml-->
+<!-- 选择上传类型 -->
+<view class="photo__upload{{_step === 1 ? ' photo__upload--show' : ''}}">
+  <view class="photo__upload__title">
+    <image class="photo__upload__title__image photo__upload__title__image--icon" src="{{_cssImg.paizhao3}}" mode="scaleToFill"></image>
+    上传凭证
+    <image class="photo__upload__title__image photo__upload__title__image--close" mode="scaleToFill" src="{{_cssImg.close}}" bindtap="close" ></image>
+  </view>
+  <view class="photo__upload__type photo__upload__type--camera" bindtap="tapCamera">
+    拍照上传
+  </view>
+  <view class="photo__upload__type photo__upload__type--album" bindtap="tapAlbum">
+    相册上传
+  </view>
+</view>
+
+<!-- 图片列表 -->
+<view class="photo__photolist{{_step === 2 ? ' photo__photolist--show' : ''}}">
+  <view class="photo__photolist__title">
+    <image class="photo__photolist__title__image" src="{{_cssImg.paizhao3}}" mode="scaleToFill"></image>
+    照片上传
+    <text class="photo__photolist__title--text">(还能上传{{photoMax - photoList.length}}张照片)</text>
+    <image class="photo__photolist__title__image photo__photolist__title__image--close" bindtap="close" mode="scaleToFill" src="{{_cssImg.close}}"></image>
+  </view>
+  <view class="photo__photolist__list">
+    <view class="photo__photolist__list__item" wx:if="{{photoList.length !== 0}}" wx:key="idx" wx:for="{{photoList}}" wx:for-index="idx" data-idx="{{idx}}" bindtap="removePhoto">
+      <image class="photo__photolist__list__item__image" src="{{item}}" mode="aspectFill"></image>
+    </view>
+    <view wx:if="{{photoList.length !== photoMax}}" class="photo__photolist__list__item photo__photolist__list__item--add" bindtap="tapPhoto">
+      <image class="photo__photolist__list__item__image" src="{{_cssImg.jia}}" mode="scaleToFill"></image>
+      <view class="photo__photolist__list__item__title">上传照片</view>
+    </view>
+  </view>
+  <view class="photo__photolist__submit">
+    <button class="photo__photolist__submit__btn" hover-class="photo__photolist__submit__btn--hover" bindtap="submit">立即报修</button>
+  </view>
+</view>

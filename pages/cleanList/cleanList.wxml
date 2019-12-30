@@ -1,0 +1,85 @@
+<view class='container'>
+  <view class="statusTitle">
+    <view class="item{{tapStatus === 'order' ? ' cur' : ''}}" bindtap="tapTouch" data-status="order">发起工单</view>
+    <!-- <view class="item{{tapStatus === 'list' ? ' cur' : ''}}" bindtap="tapTouch" data-status="list">工单列表</view> -->
+  </view>
+  <view class="list">
+   <view wx:if="{{tapStatus === 'order'}}" class="list-order">
+      <view class="order-area">
+        <view class="pickerArea">厕所</view>
+        <picker class="damagepick" range-key="ToiletName" bindchange="bindToiletPickerChange" value="{{toilet}}" range="{{toilets}}">
+          <view class="picker">
+            {{toilet === '' ? '请选择厕所' : toilets[toiletArea]['ToiletName']}}
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view wx:if="{{tapStatus === 'order'}}" class="list-order">
+      <view class="order-area">
+        <view class="pickerArea">区域</view>
+        <picker class="damagepick" range-key="RegionName" bindchange="bindAreaPickerChange" value="{{area}}" range="{{areas}}">
+          <view class="picker">
+            {{area === '' ? '请选择区域' : areas[RegionArea]['RegionName']}}
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view wx:if="{{tapStatus === 'order'}}" class="list-photo" bindtap="openCamera">
+      <view style='margin-top:2px;flex:1;text-align: center;'>
+        <image src="{{cssImg.photo}}" style="width: 48rpx; height: 36rpx;"></image>
+      </view>
+      <view style='flex:2;'>
+        拍照上传（最多上传9张照片）
+      </view>
+    </view>
+    <component-mask show="{{show}}">
+      <component-repair photo-list="{{photos}}" bind:close="close" bind:submit="submit"></component-repair>
+    </component-mask>
+  
+    <!-- <view wx:if="{{tapStatus === 'order'}}" class='list-order'>
+      <view class="{{uploadImgs.length>0?'upload-iamge-content has-image':'upload-iamge-content'}}">
+        <view class="upload-image" wx:for="{{uploadImgs}}" wx:for-item="item" wx:key="index" data-index="{{index}}" bindtap="showDetailImg">
+          <image src="{{item}}"></image>
+        </view>
+        <view class="upload-image" bindtap="openCamera">
+          <view class="upload-image-text">上传照片</view>
+        </view>
+      </view>
+    </view> -->
+    <view class="list-choice" wx:if="{{tapStatus === 'order'}}">
+
+      <view class="pickerArea">选择处理人</view>
+      <picker class="damagepick" range-key="UserName" bindchange="bindDisposePeoplePickerChange" value="{{disposePeople}}" range="{{disposePeoples}}">
+        <view class="picker">
+          {{disposePeople === '' ? '请先选择厕所' : disposePeoples[disposePeople]['UserName']}}
+        </view>
+      </picker>
+
+    </view>
+    <view class="textarea-body">
+      <view class="textarea-section" wx:if="{{tapStatus === 'order'}}">
+        <view class="textarea-section-title">备注信息</view>
+        <view class="textarea-wrp">
+          <textarea bindblur="bindTextAreaBlur"  value="{{content}}"  />
+        </view>
+      </view>
+    </view>
+      <button wx:if="{{tapStatus === 'order'}}" class='submitAll' bindtap="submitAll">提交工单</button>
+    <view wx:if="{{tapStatus === 'list'}}">
+      <!--pages/repair/repair.wxml-->
+      <view class="list-container" style="background: #566cf3 url('{{cssImg.bg}}') no-repeat; background-size: 100% auto;">
+        <view class="list-repairArea" wx:if="{{rows.length !== 0}}">
+          <view class="info" wx:key="idx" wx:for="{{rows}}" wx:for-index="idx" wx:for-item="item">
+            <view class="msg">
+              <view class="title">{{item.ReportTime}}</view>
+              <view class="des">{{item.ReportContent}}</view>
+            </view>
+            <view class="btn">
+              <button bindtap="goDetails" data-order-index="{{idx}}" data-sheet-id="{{item.WorkSheetId}}" data-page="cleanReport">查看详情</button>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

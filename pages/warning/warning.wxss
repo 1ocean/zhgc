@@ -1,0 +1,49 @@
+/* pages/warning/warning.wxss */
+.warningArea {
+  width: 600rpx;
+  padding: 40rpx 0 20rpx;
+  border-radius: 20rpx;
+  margin: 40rpx auto;
+  background: rgba(0, 0, 0, 0.2);
+  font-size: 40rpx;
+}
+
+.info {
+  font-size: 30rpx;
+  margin: 10rpx 40rpx 20rpx;
+  padding-bottom: 10rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+
+.info:last-child {
+  border: none;
+}
+
+.info .line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height:50rpx;
+}
+
+.info .line .title {
+  width:310rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+
+.info .line .msg {
+  font-size:30rpx;
+  color: #eee;
+  width:310rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.info .line .date {
+  font-size: 26rpx;
+  color: #eee;
+}

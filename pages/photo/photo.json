@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "component-mask": "../../component/mask/mask",
+    "component-photo": "../../component/photo/photo"
+  }
+}

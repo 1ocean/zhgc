@@ -1,0 +1,48 @@
+<!--pages/device/device.wxml-->
+<view class="container" style="background: #566cf3 url('{{cssImg.bg}}') no-repeat; background-size: 100% auto;">
+  <view class="statusTitle">
+    <view class="item{{tapStatus === 'no' ? ' cur' : ''}}" bindtap="tapTouch" data-status="no">未维修</view>
+    <view class="item{{tapStatus === 'doing' ? ' cur' : ''}}" bindtap="tapTouch" data-status="doing">正在维修</view>
+    <!-- <view class="item{{tapStatus === 'finish' ? ' cur' : ''}}" bindtap="tapTouch" data-status="finish">已完成</view> -->
+  </view>
+
+  <view class="table">
+    <view class="table__title">
+      <view class="table__title__item">报修类型</view>
+      <view class="table__title__item">报修日</view>
+      <view class="table__title__item table__title__item--small">区域</view>
+      <view class="table__title__item table__title__item--small" wx:if="{{tapStatus !== 'finish'}}">操作</view>
+    </view>
+    <view class="table__body" id="table">
+      <scroll-view scroll-y style="height: {{scrollheight}}px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll">
+        <view wx:if="{{tapStatus === 'no'}}">
+          <view class="table__body__container" wx:for="{{Page.no.rows}}" wx:key="idx" wx:for-index="idx" wx:for-item="item">
+            <view class="table__body__container__item">{{item.ReportContent}}</view>
+            <view class="table__body__container__item">{{item.ReportTime}}</view>
+            <view class="table__body__container__item table__body__container__item--small">{{item.RegionName}}</view>
+            <view class="table__body__container__item table__body__container__item--small" bindtap="tapHandle" data-page="report" data-sheet-id="{{item.WorkSheetId}}">
+              <image src="{{cssImg.caozuo}}" mode="scaleToFill" style="width: 30rpx; height: 30rpx;"></image>
+            </view>
+          </view>
+        </view>
+        <view wx:if="{{tapStatus === 'doing'}}">
+          <view class="table__body__container" wx:for="{{Page.doing.rows}}" wx:key="idx" wx:for-index="idx" wx:for-item="item">
+            <view class="table__body__container__item">{{item.ReportContent}}</view>
+            <view class="table__body__container__item">{{item.ReportTime}}</view>
+            <view class="table__body__container__item table__body__container__item--small">{{item.RegionName}}</view>
+            <view class="table__body__container__item table__body__container__item--small" bindtap="tapHandle" data-page="report" data-sheet-id="{{item.WorkSheetId}}">
+              <image src="{{cssImg.caozuo}}" mode="scaleToFill" style="width: 30rpx; height: 30rpx;"></image>
+            </view>
+          </view>
+        </view>
+        <view wx:if="{{tapStatus === 'finish'}}">
+          <view class="table__body__container" wx:for="{{Page.finish.rows}}" wx:key="idx" wx:for-index="idx" wx:for-item="item">
+            <view class="table__body__container__item">{{item.ReportContent}}</view>
+            <view class="table__body__container__item">{{item.ReportTime}}</view>
+            <view class="table__body__container__item table__body__container__item--small">{{item.RegionName}}</view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>

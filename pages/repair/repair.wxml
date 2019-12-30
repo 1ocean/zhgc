@@ -1,0 +1,51 @@
+<!--pages/repair/repair.wxml-->
+<view class="list-container" style="background: #566cf3 url('{{cssImg.bg}}') no-repeat; background-size: 100% auto;">
+  <view class="repairArea" wx:if="{{rows.length !== 0 && roleId !==3}}">
+    <view class="info" wx:key="idx" wx:for="{{rows}}" wx:for-index="idx" wx:for-item="item">
+      <view class="msg">
+        <view class="title">{{item.WorkSheetType}} {{item.ReportTime}}</view>
+        <view class="des">{{item.RegionName}}区域 {{item.ReportContent}}</view>
+        <view class="des">{{item.ToilteName}}</view>
+      </view>
+      <view class="btn">
+        <button wx:if="{{item.WorkSheetType === '清洁工单'}}" hover-class="hoverStyle" bindtap="goDetails" data-order-index="{{idx}}" data-sheet-id="{{item.WorkSheetId}}" data-page="cleanReport">去处理</button>
+         <button wx:if="{{item.WorkSheetType === '维修工单'}}" hover-class="hoverStyle" bindtap="closeOrder" data-order-index="{{idx}}" data-sheet-id="{{item.WorkSheetId}}">关闭工单</button>
+        <button wx:if="{{item.WorkSheetType === '已关闭'}}" class="disable" hover-class="hoverStyle">成功关闭</button>
+
+      </view>
+    </view>
+        <!-- <view class="info">
+      <view class="msg">
+        <view class="title">2018-06-12</view>
+        <view class="des">女厕所下水道堵塞女厕所下水道堵塞女厕所下水道堵塞</view>
+      </view>
+      <view class="btn">
+        <button hover-class="hoverStyle">关闭工单</button>
+      </view>
+    </view>
+    <view class="info">
+      <view class="msg">
+        <view class="title">2018-06-12</view>
+        <view class="des">女厕所下水道堵塞女厕所下水道堵塞女厕所下水道堵塞</view>
+      </view>
+      <view class="btn">
+        <button class="disable" hover-class="hoverStyle">成功关闭</button>
+      </view>
+    </view> -->
+  </view>
+<view class="repairArea" wx:if="{{roleId=== 3}}">
+    <view class="info" wx:key="idx" wx:for="{{xcRows}}" wx:for-index="idx" wx:for-item="item">
+      <view class="msg">
+        <view class="title">{{item.WorkSheetType}} {{item.ReportTime}}</view>
+        <view class="des">{{item.RegionName}}区域 {{item.ReportContent}}</view>
+        <view class="des">{{item.ToilteName}}</view>
+      </view>
+      <view class="btn">
+        <button wx:if="{{item.WorkSheetType === '清洁工单'}}" hover-class="hoverStyle" bindtap="goDetails" data-order-index="{{idx}}" data-sheet-id="{{item.WorkSheetId}}" data-page="cleanReport">去处理</button>
+         <button wx:if="{{item.WorkSheetType === '维修工单'}}" hover-class="hoverStyle" bindtap="closeOrder" data-order-index="{{idx}}" data-sheet-id="{{item.WorkSheetId}}">关闭工单</button>
+        <button wx:if="{{item.WorkSheetType === '已关闭'}}" class="disable" hover-class="hoverStyle">成功关闭</button>
+      </view>
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,69 @@
+/* pages/report/report.wxss */
+.content {
+  margin: 40rpx 60rpx 0rpx;
+}
+.content__title {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20rpx;
+}
+
+.content__body {
+  padding: 20rpx 40rpx;
+  background: rgba(0, 0, 0, 0.2);
+  margin-bottom: 20rpx;
+  border-radius: 20rpx;
+  color: #eeeeee;
+  line-height:50rpx;
+  font-size: 28rpx;
+  overflow: hidden;
+}
+
+.content__body.content__body__textarea {
+  padding: 10rpx;
+}
+
+.content.content__button {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-bottom: 40rpx;
+}
+
+.content.content__button button {
+  margin-left: 10rpx;
+}
+
+.button--reset,.button--submit,.button--finish {
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 28rpx;
+  background: #566cf3;
+  border: 1rpx solid #fff;
+  border-radius: 30rpx;
+  color: #fff;
+}
+
+.button--finish {
+  background: #fff;
+  color: #333;
+}
+
+.hoverStyle {
+  background: #7f91ff;
+}
+
+.hoverFinishStyle {
+  background: #ccc;
+}
+
+.button--add {
+  display: inline-block;
+  position: relative;
+  height: 60rpx;
+  width: 60rpx;
+  line-height: 60rpx;
+  background: #566cf3;
+  border: 1rpx solid #fff;
+  border-radius: 30rpx;
+}

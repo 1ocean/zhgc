@@ -1,0 +1,26 @@
+/* pages/home/home.wxss */
+.buttonArea {
+  margin-top: 200rpx;
+}
+
+.btn {
+  border: 1rpx solid #fff;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 36rpx;
+  border-radius: 40rpx;
+  background: rgba(255, 255, 255, 0);
+  color: #fff;
+  width: 560rpx;
+  margin: 0 auto 40rpx;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnIcon {
+  width: 48rpx; 
+  height: 48rpx; 
+  margin-right: 20rpx;
+}

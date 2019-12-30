@@ -1,0 +1,65 @@
+/* pages/repair/repair.wxss */
+.repairArea {
+  width: 600rpx;
+  padding: 40rpx 0 20rpx;
+  border-radius: 20rpx;
+  margin: 40rpx auto;
+  background: rgba(0, 0, 0, 0.2);
+  font-size: 40rpx;
+}
+
+.info {
+  font-size: 30rpx;
+  margin: 10rpx 40rpx 20rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 1rpx solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info:last-child {
+  border: none;
+}
+
+.info .msg {
+
+}
+
+.info .msg .title {
+  width:310rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size:30rpx;
+  color: #eee;
+}
+
+.info .msg .des {
+  width:310rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 30rpx;
+}
+
+.info .btn button {
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 30rpx;
+  font-size: 30rpx;
+}
+
+.info .btn button.disable,.hoverStyle {
+  background: rgba(0, 0, 0, 0.2);
+  color: #bbb;
+}
+
+.list-repairArea {
+  width: 600rpx;
+  padding: 40rpx 0 20rpx;
+  border-radius: 20rpx;
+  margin: 40rpx auto;
+  background: rgba(0, 0, 0, 0.2);
+  font-size: 40rpx;
+}

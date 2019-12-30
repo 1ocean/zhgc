@@ -1,0 +1,16 @@
+<!--pages/clock/clock.wxml-->
+<view class="container" style="background: #566cf3 url('{{cssImg.bg}}') no-repeat; background-size: 100% auto; height:{{winheight}}px;">
+  <view class="clockArea{{press === true ? ' hide': ''}}" bindtap="onPress">
+    <view class="box">
+      <view>
+        <image wx:if="{{end === false}}" src="{{cssImg.dasao}}" style="width: 85rpx; height: 105rpx;"></image>
+        <image wx:else src="{{cssImg.over}}" style="width: 85rpx; height: 105rpx;"></image>
+      </view>
+      <view>
+        <text wx:if="{{end === false}}">开始打扫</text>
+        <text wx:else>结束打扫</text>
+      </view>
+    </view>
+  </view>
+</view>
+

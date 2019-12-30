@@ -1,0 +1,222 @@
+.statusTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin: 20rpx 40rpx 0;
+  /*width: 500rpx;*/
+  border-bottom: 3rpx solid #929df5;
+}
+
+.statusTitle .item {
+  flex: 1;
+  font-size: 36rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  position: relative;
+}
+
+.statusTitle .item.cur::after {
+  display: block;
+  content: ' ';
+  position: absolute;
+  height: 3rpx;
+  width: 100%;
+  top: 80rpx;
+  left: 0;
+  background: #fff;
+}
+
+.list-order {
+  border-radius:5px;
+  margin: 20rpx 40rpx 0;
+  border: 3rpx solid #929df5;
+  box-sizing: border-box;
+  padding: 20rpx 10px;
+}
+
+.list-order .order-area {
+  display: flex;
+}
+
+.list-photo {
+  border-radius:5px;
+  margin: 20rpx 40rpx 0;
+  border: 3rpx solid #929df5;
+  box-sizing: border-box;
+  padding: 20rpx 10px;
+  display: flex;
+}
+
+.upload-image {
+  width: 75px;
+  height: 75px;
+  box-sizing: border-box;
+  border: 1px dashed #ccc;
+  text-align: center;
+  border-radius: 3px;
+  margin: 0 0 10px 10px;
+  position: relative;
+}
+
+.upload-image .cross {
+  width: 20px;
+  height: 20px;
+  /* border:1px dashed #888; */
+  margin: 17px auto 0;
+}
+
+.upload-image-text {
+  font-size: 14px;
+  color: #666;
+  margin-top: 10px;
+}
+
+.upload-iamge-content {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  border-bottom: 1px solid black;
+}
+
+.has-image {
+  flex-direction: row;
+}
+
+.list-choice {
+  border-radius:5px;
+  margin: 20rpx 40rpx 0;
+  border: 3rpx solid #929df5;
+  padding: 20rpx 10px;
+  box-sizing: border-box;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.select-arrow-down {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 16px;
+  height: 16px;
+}
+
+textarea {
+  width: 100%;
+  padding: 25rpx 0;
+  height: 90%;
+}
+
+.textarea-wrp {
+  text-align: left;
+  width: 70%;
+  height: 26vh;
+  color: black;
+  padding: 0 10%;
+  background-color: white;
+  display: inline-block;
+  border-radius:5px;
+}
+
+.textarea-section {
+  width: 100%;
+  margin-bottom: 60rpx;
+  text-align: center;
+}
+
+.textarea-section:last-child {
+  margin-bottom: 0;
+}
+
+.textarea-section-title {
+  font-size: 40rpx;
+  color: white;
+  margin-bottom: 10rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+
+.list-repairArea {
+  width: 600rpx;
+  padding: 40rpx 0 20rpx;
+  border-radius: 20rpx;
+  margin: 40rpx auto;
+  background: rgba(0, 0, 0, 0.2);
+  font-size: 40rpx;
+}
+
+.info {
+  font-size: 30rpx;
+  margin: 10rpx 40rpx 20rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 1rpx solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info:last-child {
+  border: none;
+}
+
+.info .msg .title {
+  width: 310rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 30rpx;
+  color: #eee;
+}
+
+.info .msg .des {
+  width: 310rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 30rpx;
+}
+
+.info .btn button {
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 30rpx;
+  font-size: 30rpx;
+}
+
+.info .btn button.disable, .hoverStyle {
+  background: rgba(0, 0, 0, 0.2);
+  color: #bbb;
+}
+
+picker.damagepick {
+  flex: 2;
+  width: 280rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 0 20rpx;
+  margin: 0 20rpx;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 50rpx;
+  color: #fff;
+}
+
+.pickerArea {
+  flex: 1;
+  text-align: center;
+  line-height: 80rpx;
+}
+
+list-choiceView {
+  flex: 1;
+  text-align: center;
+  line-height: 80rpx;
+}
+.submitAll{
+  width: 90%;
+  bottom:5%;
+position:absolute;
+  left: 5%;
+  z-index: -1;
+}

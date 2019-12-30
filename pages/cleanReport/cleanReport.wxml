@@ -1,0 +1,39 @@
+<!--pages/cleanReport/cleanReport.wxml-->
+<view class="container" style="background: #566cf3 url('{{cssImg.bg}}') no-repeat; background-size: 100% auto;">
+  <view class="content">
+    <view class="content__title">
+      <image src="{{cssImg.wenjian}}" style="width: 39rpx; height:48rpx;"></image>
+    </view>
+    <view class="content__body">
+      <view>状态: {{ReportStatus}}</view>
+      <view>上报时间: {{RegionTime}}</view>
+      <view>上报区域: {{ReportArea}} {{ToiletName}}</view>
+      <view>上报人: {{RepairName}}</view>
+      <view class="textarea-body">
+      <view class="textarea-section">
+        <view class="textarea-wrp">
+          <textarea disabled="true" value='{{textArea}}'/>
+        </view>
+      </view>
+      <image wx:for="{{imgs}}" wx:for-item="item" wx:key="index" src="{{item}}" class="img"></image>
+    </view>
+    </view>
+  </view>
+   <view class="content" wx:if="{{textArea.length ==0}}">
+    <view class="content__body">
+      <view>清洁时间: {{cleanTime}}</view>
+      <view>清洁人: {{cleanPerson}}</view>
+      <view class="textarea-body">
+      <view class="textarea-section">
+        <view class="textarea-wrp">
+          <textarea value='{{userTextArea}}' bindblur="userTextAreaChange"/>
+        </view>
+      </view>
+    </view>
+    </view>
+  </view>
+  <view class="button">
+  <button wx:if="{{ReportStatus==='未处理'}}" class="affirm-btn" size="mini" bindtap="submitRepairRecord">处理完毕</button>
+  <button wx:if="{{ReportStatus==='未关闭'}}" class="affirm-btn" size="mini" bindtap="CloseWorkSheets">关闭工单</button>
+  </view>
+</view>

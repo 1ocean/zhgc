@@ -1,0 +1,94 @@
+/* pages/device/device.wxss */
+.statusTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin: 20rpx 40rpx 0;
+  /*width: 500rpx;*/
+  border-bottom: 3rpx solid #929df5;
+}
+
+.statusTitle .item {
+  flex: 1;
+  font-size: 36rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  position: relative;
+}
+
+.statusTitle .item.cur::after {
+  display:block;
+  content: ' ';
+  position: absolute;
+  height: 3rpx;
+  width: 100%;
+  top: 80rpx;
+  left: 0;
+  background: #fff;
+}
+
+.table {
+  margin: 60rpx 40rpx 0;
+}
+
+.table__title {
+  display: flex;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.table__title__item {
+  text-align:center;
+  font-size: 30rpx;
+  flex: 2;
+  margin: 0 1rpx 1rpx;
+  background: rgba(0, 0, 0, .2);
+}
+
+.table__title__item:first-child {
+  border-top-left-radius: 20rpx;
+}
+
+.table__title__item:last-child {
+  border-top-right-radius: 20rpx;
+}
+
+.table__title__item.table__title__item--small {
+  flex: 1;
+}
+
+.table__body {
+}
+
+.table__body__container {
+  display: flex;
+  font-size: 30rpx;
+}
+
+.table__body__container__item {
+  text-align:center;
+  font-size: 24rpx;
+  flex: 2;
+  margin:  0 1rpx 1rpx;
+  background: rgba(0, 0, 0, .2);
+  height: 80rpx;
+  line-height: 80rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.table__body__container__item.table__body__container__item--small {
+  flex: 1;
+}
+
+.table__body__container:last-child .table__body__container__item:first-child {
+  border-bottom-left-radius: 20rpx;
+}
+
+.table__body__container:last-child .table__body__container__item:last-child {
+  border-bottom-right-radius: 20rpx;
+}

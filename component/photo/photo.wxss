@@ -1,0 +1,162 @@
+/* component/photo/photo.wxss */
+/*上传凭证区域*/
+.photo__upload {
+  width: 600rpx;
+  height: 400rpx;
+  background: #fff;
+  border-radius: 30rpx;
+  margin: 0 auto;
+  margin-top: 100rpx;
+  display: none;
+}
+
+.photo__upload.photo__upload--show {
+  display: block;
+}
+
+.photo__upload__title {
+  height: 150rpx;
+  line-height: 150rpx;
+  padding: 0 40rpx;
+  color: #333;
+  font-size: 40rpx;
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1rpx solid #eeeeee;
+  position: relative;
+}
+
+.photo__upload__title__image {
+  margin-right: 10rpx;
+}
+
+.photo__upload__title__image--icon {
+  width: 54rpx;
+  height: 42rpx;
+}
+
+.photo__upload__title__image--close {
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  right: 30rpx;
+  top: 30rpx;
+  margin-right: 0;
+}
+
+.photo__upload__type {
+  height: 120rpx;
+  line-height: 120rpx;
+  padding: 0 40rpx;
+  font-size: 30rpx;
+  color: #333;
+}
+
+.photo__upload__type--camera {
+  border-bottom: 1rpx solid #eeeeee;
+}
+
+/*选择列表区域*/
+.photo__photolist {
+  width: 600rpx;
+  background: #fff;
+  border-radius: 30rpx;
+  margin: 0 auto;
+  margin-top: 100rpx;
+  display: none;
+}
+
+.photo__photolist--show {
+  display: block;
+}
+
+.photo__photolist__title {
+  height: 150rpx;
+  line-height: 150rpx;
+  padding: 0 40rpx;
+  color: #333;
+  font-size: 30rpx;
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1rpx solid #eeeeee;
+  position: relative;
+}
+
+.photo__photolist__title--text {
+  font-size: 26rpx;
+  color: #d1d1d1;
+}
+
+.photo__photolist__title__image {
+  margin-right: 10rpx;
+  width: 54rpx;
+  height: 42rpx;
+}
+
+.photo__photolist__title__image--close {
+  position: absolute;
+  right: 20rpx;
+  top: 30rpx;
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.photo__photolist__list {
+  padding: 40rpx;
+  display: flex;
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+
+.photo__photolist__list__item {
+  color: #333;
+  width: 150rpx;
+  height: 150rpx;
+  margin: 9rpx;
+  border: 1px solid #e1e1e1;
+}
+
+.photo__photolist__list__item__image {
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.photo__photolist__list__item--add {
+  background: #efefef;
+  border: 1px dashed #e1e1e1;
+  text-align: center;
+}
+
+.photo__photolist__list__item--add .photo__photolist__list__item__image {
+  width: 52rpx;
+  height: 48rpx;
+  margin-top: 40rpx;
+}
+
+.photo__photolist__list__item--add .photo__photolist__list__item__title {
+  color: #999;
+  font-size: 30rpx;
+}
+
+.photo__photolist__submit {
+  width: 400rpx;
+  margin: 0 auto;
+  padding-bottom: 40rpx;
+}
+
+.photo__photolist__submit .photo__photolist__submit__btn {
+  line-height: 80rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  background: #566cf3;
+  color: #fff;
+  font-size: 30rpx;
+}
+
+.photo__photolist__submit .photo__photolist__submit__btn--hover {
+  background: #8093fc;
+}

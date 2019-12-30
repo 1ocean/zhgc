@@ -1,0 +1,35 @@
+<!--pages/photo/photo.wxml-->
+<view class="container" style="background: #566cf3 url('{{cssImg.bg}}') no-repeat; background-size: 100% auto; height:{{winheight}}px;">
+  <view class="photoArea">
+  <view class="section">
+      <text>报修厕所</text>
+      <picker class="damagepick" range-key="ToiletName" bindchange="bindToiletPickerChange" value="{{toilet}}" range="{{toilets}}">
+        <view class="picker">
+          {{toilet === '' ? '选择厕所' : toilets[toiletArea]['ToiletName']}}
+        </view>
+      </picker>
+      <image src="" style="width: 48rpx; height: 36rpx;"></image>
+    </view>
+    <view class="section">
+      <text>报修区域</text>
+      <picker class="damagepick" range-key="RegionName" bindchange="bindAreaPickerChange" value="{{area}}" range="{{areas}}">
+        <view class="picker">
+          {{area === '' ? '选择区域' : areas[area]['RegionName']}}
+        </view>
+      </picker>
+      <image src="" style="width: 48rpx; height: 36rpx;"></image>
+    </view>
+    <view class="section">
+      <text>报修项目</text>
+      <picker class="damagepick" range-key="Name" bindchange="bindDamagePickerChange" value="{{damage}}" range="{{damages}}">
+        <view class="picker">
+          {{damage === '' ? '选择项目' : damages[damage]['Name']}}
+        </view>
+      </picker>
+      <image src="{{cssImg.photo}}" style="width: 48rpx; height: 36rpx;" bindtap="chooseImage"></image>
+    </view>
+  </view>
+  <component-mask show="{{show}}">
+    <component-photo photo-list="{{photos}}" bind:close="close" bind:submit="submit"></component-photo>
+  </component-mask>
+</view>
